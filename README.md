@@ -57,3 +57,5 @@ After getting a job: Continue to program hobby projects that you make with new f
 21 After getting a job continue to program hobby projects that you make with new frameworks and libraries for the sake of having a spirit of exploration.
 
 Around 1130 took time to refresh project objectives and send a new email of project overview
+
+At 2 to 4 worked on make controller work had error
