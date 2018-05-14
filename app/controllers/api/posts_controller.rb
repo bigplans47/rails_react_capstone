@@ -5,6 +5,9 @@ class Api::PostsController < ApplicationController
   end
   def create
     @single_post = Post.create!(post_params)
+    render status: 200, json: {
+      message: "Your post has been created successfully."
+    }
   end
   def update
     @post = Post.find(params[:id])
