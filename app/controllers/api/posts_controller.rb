@@ -6,6 +6,14 @@ class Api::PostsController < ApplicationController
   def create
     @single_post = Post.create!(post_params)
   end
+  def update
+    @post = Post.find(params[:id])
+    if @post.update!(post_params)
+      render status: 200, json: {
+        message: "Your post has been updated successfully."
+      }
+    end
+  end
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
