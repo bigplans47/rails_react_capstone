@@ -7,7 +7,7 @@ import PostsDisplay from './PostsDisplay'
 
 const App = (props) => (
   <Router>
-	<div>
+	<div id="testApp">
 	  <Route
 	    path='/'
 	    component={PostsDisplay}

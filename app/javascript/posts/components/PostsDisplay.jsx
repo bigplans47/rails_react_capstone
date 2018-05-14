@@ -23,6 +23,8 @@ class PostsDisplay extends React.Component {
 
   setPostIdFromQueryString (qs) {
     this.qsParams = queryString.parse(qs);
+    console.log(queryString.parse(location.search))
+    console.log(this.qsParams)
     if (this.qsParams.post) {
       // assign post ID from the URL's query string
       this.postId = Number(this.qsParams.post);
@@ -44,11 +46,18 @@ class PostsDisplay extends React.Component {
   }
 
   render () {
-    const nextPostId = Number(this.state.post.id) + 1;
-
+    const post = this.state.post
+    const nextPostId = post.next_id
+    const previousQuoteId = post.previous_id
     return (
-      <div>
-        <Link to={`/?post=${nextPostId}`}>Next</Link>
+      <div id="testPostDisplay">
+        {previousQuoteId &&
+          <Link to={`/?post=${previousQuoteId}`}>Previous</Link>
+        }
+        <br></br>
+        {nextPostId &&
+          <Link to={`/?post=${nextPostId}`}>Next</Link>
+        }
         <p>{this.state.post.thought}</p>
         <p>{this.state.post.feeling}</p>
         <p>{this.state.post.body_sensation}</p>
