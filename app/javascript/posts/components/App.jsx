@@ -6,11 +6,12 @@ import {
 import PostsDisplay from './PostsDisplay'
 
 const App = (props) => (
-  <Router>
+  <Router startingPostId={props.startingPostId}>
 	<div id="testApp">
 	  <Route
 	    path='/'
-	    component={PostsDisplay}
+      startingPostId={props.startingPostId}
+	    render={(routeProps) => <PostsDisplay {...props} {...routeProps} />}
 	  />
 	</div>
   </Router>

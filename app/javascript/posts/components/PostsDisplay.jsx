@@ -29,7 +29,8 @@ class PostsDisplay extends React.Component {
       // assign post ID from the URL's query string
       this.postId = Number(this.qsParams.post);
     } else {
-      this.postId = 1;
+      // this.postId = 1;
+      this.postId = this.props.startingPostId
       // update URL in browser to reflect current post in query string
       this.props.history.push(`/?post=${this.postId}`);
     }
@@ -48,11 +49,11 @@ class PostsDisplay extends React.Component {
   render () {
     const post = this.state.post
     const nextPostId = post.next_id
-    const previousQuoteId = post.previous_id
+    const previousPostId = post.previous_id
     return (
       <div id="testPostDisplay">
-        {previousQuoteId &&
-          <Link to={`/?post=${previousQuoteId}`}>Previous</Link>
+        {previousPostId &&
+          <Link to={`/?post=${previousPostId}`}>Previous</Link>
         }
         <br></br>
         {nextPostId &&
