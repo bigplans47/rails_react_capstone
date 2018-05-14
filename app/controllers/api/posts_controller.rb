@@ -6,6 +6,13 @@ class Api::PostsController < ApplicationController
   def create
     @single_post = Post.create!(post_params)
   end
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    render status: 200, json: {
+      message: "Your post has been deleted successfully."
+    }
+  end
 
   private
   def post_params
