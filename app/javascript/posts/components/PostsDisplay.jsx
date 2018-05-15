@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import queryString from 'query-string';
 import axios from 'axios';
+import PostFooter from './PostFooter';
 
 class PostsDisplay extends React.Component {
   constructor () {
@@ -59,9 +60,9 @@ class PostsDisplay extends React.Component {
         {nextPostId &&
           <Link to={`/?post=${nextPostId}`}>Next</Link>
         }
-        <p>{this.state.post.thought}</p>
-        <p>{this.state.post.feeling}</p>
-        <p>{this.state.post.body_sensation}</p>
+        <p>Thoughts - {this.state.post.thought}</p>
+        <p>Feelings - {this.state.post.feeling}</p>
+        <p>Body Sensations - {this.state.post.body_sensation}</p>
         <p>{this.state.post.thought_rating}</p>
         <p>{this.state.post.feeling_rating}</p>
         <p>{this.state.post.body_sensation_rating}</p>
@@ -72,6 +73,8 @@ class PostsDisplay extends React.Component {
         <p>{this.state.post.hour_mediate}</p>
         <p>{this.state.post.acceptance}</p>
         <p>{this.state.post.text_body}</p>
+        <p>{this.state.post.created_at}</p>
+        <PostFooter />
       </div>
     );
   }

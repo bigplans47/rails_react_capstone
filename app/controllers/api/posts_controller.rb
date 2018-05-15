@@ -8,6 +8,7 @@ class Api::PostsController < ApplicationController
     render status: 200, json: {
       message: "Your post has been created successfully."
     }
+
   end
   def update
     @post = Post.find(params[:id])

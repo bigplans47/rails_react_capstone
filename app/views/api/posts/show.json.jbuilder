@@ -1,1 +1,1 @@
-json.extract! @post, :id, :thought, :feeling, :body_sensation, :thought_rating, :feeling_rating, :body_sensation_rating, :hour_sleep, :hour_work, :hour_excercise, :hour_open, :hour_mediate, :acceptance, :text_body, :next_id, :previous_id
+json.extract! @post, :id, :thought, :feeling, :body_sensation, :thought_rating, :feeling_rating, :body_sensation_rating, :hour_sleep, :hour_work, :hour_excercise, :hour_open, :hour_mediate, :acceptance, :text_body, :next_id, :previous_id, :created_at
