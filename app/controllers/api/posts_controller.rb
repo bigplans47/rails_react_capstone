@@ -5,15 +5,12 @@ class Api::PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
   def create
-    # my_thought = params.fetch('thoughts')
-    # p my_thought
     p params
     @single_post = Post.create!(post_params)
     render status: 200, json: {
       message: "Your post has been created successfully."
     }
     # respond_to :api, Post.create(post_params)
-
   end
   def update
     @post = Post.find(params[:id])
