@@ -1,4 +1,6 @@
-![Ticketing](/img/initial.png?raw=true "initial home page")
+![Ticketing](/img/landing_page.png?raw=true "landing page")
+
+![Ticketing](/img/create_post.png?raw=true "create post")
 
 Conscious Moment - Initial Home Page
 
