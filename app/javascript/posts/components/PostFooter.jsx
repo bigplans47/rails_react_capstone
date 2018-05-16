@@ -41,7 +41,7 @@ class PostFooter extends React.Component {
   render () {
     return (
       <div>
-        <h1>Test create new</h1>
+        <h1>Create a Post</h1>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="thoughts">Thoughts </label>
           <input id="thoughts" name="thoughts" type="text" />
@@ -82,13 +82,11 @@ class PostFooter extends React.Component {
           <label htmlFor="text_bodys">Journal Notes about your day </label>
           <input id="text_bodys" name="text_bodys" type="text" />
           <br></br>
-
           <button>Create Entry</button>
         </form>
       </div>
     );
   }
-
 }
 
 export default PostFooter;

@@ -53,26 +53,30 @@ class PostsDisplay extends React.Component {
     const previousPostId = post.previous_id
     return (
       <div id="testPostDisplay">
-        {previousPostId &&
-          <Link to={`/?post=${previousPostId}`}>Previous</Link>
-        }
-        <br></br>
-        {nextPostId &&
-          <Link to={`/?post=${nextPostId}`}>Next</Link>
-        }
+        <ul>
+          <li>
+            {
+              previousPostId && <Link id="link-previous" to={`/?post=${previousPostId}`}>Previous</Link>
+            }
+          </li>
+          <li>
+            {
+              nextPostId && <Link id="link-next" to={`/?post=${nextPostId}`}>Next</Link>
+            }
+          </li>
+        </ul>
         <p>Thoughts - {this.state.post.thought}</p>
         <p>Feelings - {this.state.post.feeling}</p>
         <p>Body Sensations - {this.state.post.body_sensation}</p>
-        <p>{this.state.post.thought_rating}</p>
-        <p>{this.state.post.feeling_rating}</p>
-        <p>{this.state.post.body_sensation_rating}</p>
-        <p>{this.state.post.hour_sleep}</p>
-        <p>{this.state.post.hour_work}</p>
-        <p>{this.state.post.hour_excercise}</p>
-        <p>{this.state.post.hour_open}</p>
-        <p>{this.state.post.hour_mediate}</p>
-        <p>{this.state.post.acceptance}</p>
-        <p>{this.state.post.text_body}</p>
+        <p>Thought Rating - {this.state.post.thought_rating}</p>
+        <p>Feeling Rating - {this.state.post.feeling_rating}</p>
+        <p>Body Sensation Rating - {this.state.post.body_sensation_rating}</p>
+        <p>Hours of Sleep - {this.state.post.hour_sleep}</p>
+        <p>Hours of Work - {this.state.post.hour_work}</p>
+        <p>Hours of Exercise - {this.state.post.hour_excercise}</p>
+        <p>Hours of Free Time - {this.state.post.hour_open}</p>
+        <p>Hours of Meditation - {this.state.post.hour_mediate}</p>
+        <p>Journal Notes about your day - {this.state.post.text_body}</p>
         <p>{this.state.post.created_at}</p>
         <PostFooter />
       </div>
