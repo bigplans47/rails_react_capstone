@@ -24,7 +24,6 @@ class PostFooter extends React.Component {
     let acceptances = document.getElementById("acceptances").value
     let text_bodys = document.getElementById("text_bodys").value
 
-
     console.log(thoughts);
     let entry = {thought:thoughts, feeling:feelings, body_sensation:body_sensations, thought_rating:thought_ratings, feeling_rating:feeling_ratings, body_sensation_rating:body_sensation_ratings, hour_sleep:hour_sleeps, hour_work:hour_works, hour_excercise:hour_excercises, hour_open:hour_opens, hour_mediate:hour_mediates, acceptance:acceptances, text_body:text_bodys}
     console.log(entry);
@@ -36,6 +35,20 @@ class PostFooter extends React.Component {
         Accept: 'application/json',
       })
     });
+    document.getElementById("thoughts").value = ''
+    document.getElementById("feelings").value = ''
+    document.getElementById("body_sensations").value = ''
+    document.getElementById("thought_ratings").value = ''
+    document.getElementById("feeling_ratings").value = ''
+    document.getElementById("body_sensation_ratings").value = ''
+    document.getElementById("hour_sleeps").value = ''
+    document.getElementById("hour_works").value = ''
+    document.getElementById("hour_excercises").value = ''
+    document.getElementById("hour_opens").value = ''
+    document.getElementById("hour_mediates").value = ''
+    //note acceptences not working due to boolean conversion needed
+    document.getElementById("acceptances").value = ''
+    document.getElementById("text_bodys").value = ''
   }
 
   render () {
